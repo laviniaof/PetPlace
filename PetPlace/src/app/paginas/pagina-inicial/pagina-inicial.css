@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Cabin', sans-serif;
+}
+
+.pagina-inicial {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e8 0%, #fff9e6 100%);
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #fef7d5;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-img {
+  height: 56px;
+  width: 56px;
+  object-fit: contain;
+  margin-right: 12px;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.logo-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2d5a2d;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Seymour One', cursive;
+}
+
+.logo-heart {
+  position: relative;
+}
+
+.heart {
+  width: 60px;
+  height: 60px;
+  background: #a8e6cf;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(168, 230, 207, 0.4);
+  overflow: hidden;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background: #a8e6cf;
+  border-radius: 30px 30px 0 0;
+}
+
+.heart::before {
+  left: 15px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  right: 15px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heart-shine {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
+.paw {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.paw-pad {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-pad {
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+}
+
+.left-pad {
+  width: 8px;
+  height: 8px;
+  top: -12px;
+  left: 2px;
+}
+
+.right-pad {
+  width: 8px;
+  height: 8px;
+  top: -12px;
+  right: 2px;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  color: #2d5a2d;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-family: 'Cabin', sans-serif;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: #5a7c5a;
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Cabin', sans-serif;
+}
+
+.search-section {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  border: 2px solid #e8f5e8;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #e8f5e8;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #2d5a2d;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-family: 'Cabin', sans-serif;
+}
+
+.feature-card p {
+  color: #5a7c5a;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+  }
+  
+  .heart {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .features-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .heart {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .main-content {
+    padding: 20px 15px;
+  }
+}

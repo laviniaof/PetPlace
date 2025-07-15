@@ -1,0 +1,15 @@
+<div class="search-container">
+  <div class="search-box">
+    <div class="search-icon">🔍</div>
+    <input type="text" placeholder="O que você está procurando para seu pet?" class="search-input"
+      [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" (focus)="onInputFocus()" (blur)="onInputBlur()">
+    <button class="search-button" (click)="onSearch()">
+      Buscar
+    </button>
+  </div>
+  <div class="search-suggestions" *ngIf="showSuggestions">
+    <div class="suggestion-item" *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion)">
+      {{ suggestion }}
+    </div>
+  </div>
+</div>
